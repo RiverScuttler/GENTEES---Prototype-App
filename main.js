@@ -6,7 +6,7 @@ function switchScreen(screenId, navItem) {
       screen.classList.remove('active');
    });
 
-   // Remove active from all nav items
+   // Remove active from all nav isssstems
    document.querySelectorAll('.nav-item').forEach(item => {
       item.classList.remove('active');
    });
