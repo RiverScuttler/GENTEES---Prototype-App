@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <title>GEN TEES - Clothing App</title>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+   <!-- Status Bar -->
+   <!-- <div class="status-bar">
+      <span class="status-time">9:41</span>
+      <div class="status-icons">
+         <span>📶</span>
+         <span>📡</span>
+         <span>🔋</span>
+      </div>
+   </div> -->
+
+   <!-- Top Navigation -->
+   <div class="top-nav">
+      <div class="logo"></div>
+      <div class="top-icons">
+         <button class="icon-btn">🔔</button>
+         <button class="icon-btn">💬</button>
+      </div>
+   </div>
+
+   <!-- Home Screen -->
+   <div class="screen active" id="homeScreen">
+      <!-- Search -->
+      <div class="search-container">
+         <input type="text" class="search-bar" placeholder="Search for styles, brands, trends...">
+      </div>
+
+      <!-- Story Cards -->
+      <div class="story-section">
+         <div class="story-scroll">
+            <div class="story-card" onclick="showCustomDesign()">
+               <div>
+                  <span class="story-badge">New Feature</span>
+               </div>
+               <div class="story-content">
+                  <h3>Create Your Own Design</h3>
+                  <p>Don't just wear it—make it. Drag, drop, and design.</p>
+               </div>
+               <span class="story-icon"><img src="images/create own design.png" alt="Create your own design"></span>
+            </div>
+            <div class="story-card">
+               <div>
+                  <span class="story-badge">Limited Drop</span>
+               </div>
+               <div class="story-content">
+                  <h3>Spring Collection 2026</h3>
+                  <p>Exclusive pieces available for 48 hours only</p>
+               </div>
+               <span class="story-icon">🌸</span>
+            </div>
+            <div class="story-card">
+               <div>
+                  <span class="story-badge">Trending</span>
+               </div>
+               <div class="story-content">
+                  <h3>Minimalist Essentials</h3>
+                  <p>Timeless pieces for your wardrobe</p>
+               </div>
+               <span class="story-icon">👕</span>
+            </div>
+         </div>
+      </div>
+
+      <!-- Categories -->
+      <div class="categories">
+         <div class="category-scroll">
+            <div class="category-pill active">All</div>
+            <div class="category-pill">New In</div>
+            <div class="category-pill">Shirts</div>
+            <div class="category-pill">Dresses</div>
+            <div class="category-pill">Jackets</div>
+            <div class="category-pill">Accessories</div>
+         </div>
+      </div>
+
+      <!-- Products -->
+      <div class="section-header">
+         <h2 class="section-title">Pre-Designed</h2>
+         <a href="#" class="view-all">View All →</a>
+      </div>
+
+      <div class="products">
+         <div class="product-grid">
+            <div class="product-card">
+               <div class="product-image">
+                  <span class="product-favorite">🤍</span>
+                  <span class="product-badge">NEW</span>
+                  <span>👔</span>
+               </div>
+               <div class="product-info">
+                  <div class="product-name">Classic Oxford Shirt</div>
+                  <div class="product-price">
+                     <span class="price">$89</span>
+                     <span class="rating">⭐ 4.8</span>
+                  </div>
+               </div>
+            </div>
+
+            <div class="product-card">
+               <div class="product-image">
+                  <span class="product-favorite">🤍</span>
+                  <span>👗</span>
+               </div>
+               <div class="product-info">
+                  <div class="product-name">Summer Midi Dress</div>
+                  <div class="product-price">
+                     <span class="price">$129</span>
+                     <span class="rating">⭐ 4.9</span>
+                  </div>
+               </div>
+            </div>
+
+            <div class="product-card">
+               <div class="product-image">
+                  <span class="product-favorite">🤍</span>
+                  <span class="product-badge">SALE</span>
+                  <span>🧥</span>
+               </div>
+               <div class="product-info">
+                  <div class="product-name">Denim Jacket</div>
+                  <div class="product-price">
+                     <span class="price">$159</span>
+                     <span class="rating">⭐ 4.7</span>
+                  </div>
+               </div>
+            </div>
+
+            <div class="product-card">
+               <div class="product-image">
+                  <span class="product-favorite">🤍</span>
+                  <span>👖</span>
+               </div>
+               <div class="product-info">
+                  <div class="product-name">Slim Fit Chinos</div>
+                  <div class="product-price">
+                     <span class="price">$79</span>
+                     <span class="rating">⭐ 4.6</span>
+                  </div>
+               </div>
+            </div>
+
+            <div class="product-card">
+               <div class="product-image">
+                  <span class="product-favorite">🤍</span>
+                  <span class="product-badge">NEW</span>
+                  <span>🧣</span>
+               </div>
+               <div class="product-info">
+                  <div class="product-name">Silk Scarf</div>
+                  <div class="product-price">
+                     <span class="price">$49</span>
+                     <span class="rating">⭐ 5.0</span>
+                  </div>
+               </div>
+            </div>
+
+            <div class="product-card">
+               <div class="product-image">
+                  <span class="product-favorite">🤍</span>
+                  <span>👘</span>
+               </div>
+               <div class="product-info">
+                  <div class="product-name">Evening Gown</div>
+                  <div class="product-price">
+                     <span class="price">$249</span>
+                     <span class="rating">⭐ 4.9</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Custom Design CTA -->
+      <div class="custom-cta" onclick="showCustomDesign()">
+         <h3>Design Your Own Style</h3>
+         <p>Choose fabrics, colors, and create something unique</p>
+         <button class="custom-btn">Start Creating →</button>
+      </div>
+   </div>
+
+   <!-- Custom Design Screen -->
+   <div class="screen" id="customScreen">
+      <div class="section-header">
+         <h2 class="section-title">Custom Studio</h2>
+         <a href="#" class="view-all">Templates →</a>
+      </div>
+
+      <div style="padding: 20px;">
+         <div
+            style="background: var(--bg-card); border-radius: 20px; padding: 30px; text-align: center; margin-bottom: 20px;">
+            <div style="font-size: 80px; margin-bottom: 20px;">✂️</div>
+            <h3 style="font-family: 'Syne', sans-serif; font-size: 24px; margin-bottom: 15px;">Design Studio</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 25px; line-height: 1.6;">
+               Start from scratch or choose a template to customize
+            </p>
+            <button class="custom-btn" style="width: 100%; margin-bottom: 15px;">Blank Canvas</button>
+            <button class="custom-btn" style="width: 100%; background: var(--bg-secondary);">Browse
+               Templates</button>
+         </div>
+
+         <h3 style="font-family: 'Syne', sans-serif; font-size: 20px; margin-bottom: 15px;">Customization Options
+         </h3>
+
+         <div class="menu-item">
+            <div class="menu-left">
+               <div class="menu-icon">🎨</div>
+               <span class="menu-text">Choose Colors</span>
+            </div>
+            <span>→</span>
+         </div>
+
+         <div class="menu-item">
+            <div class="menu-left">
+               <div class="menu-icon">🧵</div>
+               <span class="menu-text">Select Fabric</span>
+            </div>
+            <span>→</span>
+         </div>
+
+         <div class="menu-item">
+            <div class="menu-left">
+               <div class="menu-icon">📐</div>
+               <span class="menu-text">Size & Fit</span>
+            </div>
+            <span>→</span>
+         </div>
+
+         <div class="menu-item">
+            <div class="menu-left">
+               <div class="menu-icon">✨</div>
+               <span class="menu-text">Add Details</span>
+            </div>
+            <span>→</span>
+         </div>
+      </div>
+   </div>
+
+   <!-- Cart Screen -->
+   <div class="screen" id="cartScreen">
+      <div class="section-header">
+         <h2 class="section-title">Shopping Cart</h2>
+         <span class="view-all">3 items</span>
+      </div>
+
+      <div class="cart-items">
+         <div class="cart-item">
+            <div class="cart-image">👔</div>
+            <div class="cart-details">
+               <div class="cart-name">Classic Oxford Shirt</div>
+               <div class="cart-size">Size: M • Color: White</div>
+               <div class="cart-actions">
+                  <div class="quantity-control">
+                     <button class="qty-btn">−</button>
+                     <span>1</span>
+                     <button class="qty-btn">+</button>
+                  </div>
+                  <span class="price">$89</span>
+               </div>
+            </div>
+         </div>
+
+         <div class="cart-item">
+            <div class="cart-image">👗</div>
+            <div class="cart-details">
+               <div class="cart-name">Summer Midi Dress</div>
+               <div class="cart-size">Size: S • Color: Blue</div>
+               <div class="cart-actions">
+                  <div class="quantity-control">
+                     <button class="qty-btn">−</button>
+                     <span>2</span>
+                     <button class="qty-btn">+</button>
+                  </div>
+                  <span class="price">$258</span>
+               </div>
+            </div>
+         </div>
+
+         <div class="cart-item">
+            <div class="cart-image">🧣</div>
+            <div class="cart-details">
+               <div class="cart-name">Silk Scarf</div>
+               <div class="cart-size">One Size • Color: Gold</div>
+               <div class="cart-actions">
+                  <div class="quantity-control">
+                     <button class="qty-btn">−</button>
+                     <span>1</span>
+                     <button class="qty-btn">+</button>
+                  </div>
+                  <span class="price">$49</span>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="cart-total">
+         <div class="total-row">
+            <span style="color: var(--text-secondary);">Subtotal</span>
+            <span>$396</span>
+         </div>
+         <div class="total-row">
+            <span style="color: var(--text-secondary);">Shipping</span>
+            <span>$12</span>
+         </div>
+         <div class="total-row final">
+            <span>Total</span>
+            <span style="color: var(--accent-gold);">$408</span>
+         </div>
+         <button class="checkout-btn">Checkout</button>
+      </div>
+   </div>
+
+   <!-- Profile Screen -->
+   <div class="screen" id="profileScreen">
+      <div class="profile-header">
+         <div class="profile-avatar">👤</div>
+         <div class="profile-name">Alex Morgan</div>
+         <div class="profile-email">alex.morgan@email.com</div>
+      </div>
+
+      <div class="profile-stats">
+         <div class="stat-item">
+            <div class="stat-value">24</div>
+            <div class="stat-label">Orders</div>
+         </div>
+         <div class="stat-item">
+            <div class="stat-value">12</div>
+            <div class="stat-label">Designs</div>
+         </div>
+         <div class="stat-item">
+            <div class="stat-value">156</div>
+            <div class="stat-label">Points</div>
+         </div>
+      </div>
+
+      <div class="profile-menu">
+         <div class="menu-item">
+            <div class="menu-left">
+               <div class="menu-icon">📦</div>
+               <span class="menu-text">My Orders</span>
+            </div>
+            <span>→</span>
+         </div>
+
+         <div class="menu-item">
+            <div class="menu-left">
+               <div class="menu-icon">🎨</div>
+               <span class="menu-text">My Designs</span>
+            </div>
+            <span>→</span>
+         </div>
+
+         <div class="menu-item">
+            <div class="menu-left">
+               <div class="menu-icon">❤️</div>
+               <span class="menu-text">Wishlist</span>
+            </div>
+            <span>→</span>
+         </div>
+
+         <div class="menu-item">
+            <div class="menu-left">
+               <div class="menu-icon">📍</div>
+               <span class="menu-text">Addresses</span>
+            </div>
+            <span>→</span>
+         </div>
+
+         <div class="menu-item">
+            <div class="menu-left">
+               <div class="menu-icon">💳</div>
+               <span class="menu-text">Payment Methods</span>
+            </div>
+            <span>→</span>
+         </div>
+
+         <div class="menu-item">
+            <div class="menu-left">
+               <div class="menu-icon">⚙️</div>
+               <span class="menu-text">Settings</span>
+            </div>
+            <span>→</span>
+         </div>
+
+         <div class="menu-item">
+            <div class="menu-left">
+               <div class="menu-icon">💬</div>
+               <span class="menu-text">Help & Support</span>
+            </div>
+            <span>→</span>
+         </div>
+      </div>
+   </div>
+
+   <!-- Bottom Navigation -->
+   <div class="bottom-nav">
+      <div class="nav-item active" onclick="switchScreen('homeScreen', this)">
+         <span class="nav-icon">🏠</span>
+         <span class="nav-label">HOME</span>
+      </div>
+      <div class="nav-item" onclick="switchScreen('customScreen', this)">
+         <span class="nav-icon">✨</span>
+         <span class="nav-label">CUSTOM</span>
+      </div>
+      <div class="nav-item" onclick="switchScreen('cartScreen', this)">
+         <span class="nav-icon">🛍️</span>
+         <span class="nav-label">CART</span>
+         <span class="nav-badge">3</span>
+      </div>
+      <div class="nav-item" onclick="switchScreen('profileScreen', this)">
+         <span class="nav-icon">👤</span>
+         <span class="nav-label">PROFILE</span>
+      </div>
+   </div>
+
+   <script src="main.js"></script>
+</body>
+
+</html>
