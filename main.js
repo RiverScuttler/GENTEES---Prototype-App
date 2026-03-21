@@ -69,20 +69,35 @@ document.querySelector('.checkout-btn')?.addEventListener('click', function () {
    alert('Proceeding to checkout! Payment & shipping details would be collected here.');
 });
 
+// Reliable Mobile Toggle
+// document.addEventListener('DOMContentLoaded', () => {
+//    const drawer = document.getElementById('cartDrawer');
+//    const handle = document.querySelector('.drawer-handle');
+
+//    if (handle) {
+//       handle.addEventListener('click', (e) => {
+//          e.preventDefault();
+//          toggleCartDrawer();
+//       });
+//    }
+// });
+
 function toggleCartDrawer() {
    const drawer = document.getElementById('cartDrawer');
-   const label = drawer.querySelector('.handle-label');
+   const arrow = document.getElementById('drawerArrow');
    
+   if (!drawer) return;
+
    drawer.classList.toggle('collapsed');
    
-   // Optional: Change text based on state
+   // Rotate arrow manually if CSS transition is finicky
    if (drawer.classList.contains('collapsed')) {
-      label.textContent = "View Order Summary";
-      vibrate(); // Use your existing vibration function
+      arrow.style.transform = 'rotate(0deg)';
    } else {
-      label.textContent = "Close Summary";
-      vibrate();
+      arrow.style.transform = 'rotate(180deg)';
    }
+   
+   vibrate(); // Your existing haptic function
 }
 
 // Menu items
