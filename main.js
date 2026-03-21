@@ -69,6 +69,22 @@ document.querySelector('.checkout-btn')?.addEventListener('click', function () {
    alert('Proceeding to checkout! Payment & shipping details would be collected here.');
 });
 
+function toggleCartDrawer() {
+   const drawer = document.getElementById('cartDrawer');
+   const label = drawer.querySelector('.handle-label');
+   
+   drawer.classList.toggle('collapsed');
+   
+   // Optional: Change text based on state
+   if (drawer.classList.contains('collapsed')) {
+      label.textContent = "View Order Summary";
+      vibrate(); // Use your existing vibration function
+   } else {
+      label.textContent = "Close Summary";
+      vibrate();
+   }
+}
+
 // Menu items
 document.querySelectorAll('.menu-item').forEach(item => {
    item.addEventListener('click', function () {

@@ -61,7 +61,8 @@
                   <h3>Minimalist Essentials</h3>
                   <p>Timeless pieces for your wardrobe</p>
                </div>
-               <span class="story-icon"><img src="images/minimalist essentials2.png" alt="Create your own design"></span>
+               <span class="story-icon"><img src="images/minimalist essentials2.png"
+                     alt="Create your own design"></span>
             </div>
          </div>
       </div>
@@ -197,7 +198,8 @@
                Templates</button>
          </div>
 
-         <h3 style="font-family: 'Syne', sans-serif; font-size: 20px; margin-bottom: 15px; color: #181818;">Customization Options
+         <h3 style="font-family: 'Syne', sans-serif; font-size: 20px; margin-bottom: 15px; color: #181818;">
+            Customization Options
          </h3>
 
          <div class="menu-item">
@@ -291,20 +293,27 @@
          </div>
       </div>
 
-      <div class="cart-total">
-         <div class="total-row">
-            <span style="color: var(--text-secondary);">Subtotal</span>
-            <span>₱3,650</span>
+      <div class="cart-total collapsed" id="cartDrawer">
+         <div class="drawer-handle" onclick="toggleCartDrawer()">
+            <span id="drawerArrow">▲</span>
+            <span class="handle-label">View Order Summary</span>
          </div>
-         <div class="total-row">
-            <span style="color: var(--text-secondary);">Shipping</span>
-            <span>₱60</span>
+
+         <div class="drawer-content">
+            <div class="total-row">
+               <span style="color: var(--text-secondary);">Subtotal</span>
+               <span style="color: #323232;">₱3,650</span>
+            </div>
+            <div class="total-row">
+               <span style="color: var(--text-secondary);">Shipping</span>
+               <span style="color: #323232;">₱60</span>
+            </div>
+            <div class="total-row final">
+               <span style="color: #181818;">Total</span>
+               <span style="color: var(--accent-gold);">₱3,710</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
          </div>
-         <div class="total-row final">
-            <span>Total</span>
-            <span style="color: var(--accent-gold);">₱3,710</span>
-         </div>
-         <button class="checkout-btn">Checkout</button>
       </div>
    </div>
 
