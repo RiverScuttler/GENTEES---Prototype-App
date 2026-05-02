@@ -15,8 +15,12 @@ function switchScreen(screenId, navItem) {
    document.getElementById(screenId).classList.add('active');
    navItem.classList.add('active');
 
-   // Scroll to top
-   window.scrollTo({ top: 0, behavior: 'smooth' });
+   const container = document.querySelector('.device-screen');
+   if (container) {
+      container.scrollTo({ top: 0, behavior: 'smooth' });
+   } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+   }
 }
 
 // Quick custom design access
