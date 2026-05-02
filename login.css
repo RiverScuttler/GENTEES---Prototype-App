@@ -1,0 +1,173 @@
+:root {
+  --bg-primary: #efefef;
+  --bg-card: #dfdfdf;
+  --accent-gold: #e8c547;
+  --accent-pink: #ff6b9d;
+  --text-secondary: #a0a0a0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212;
+  /* Dark outside the phone */
+}
+
+/* Phone Shell Styling */
+.device-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+.device-screen {
+  width: 100%;
+  height: 100%;
+  background: var(--bg-primary);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Login UI */
+.login-container {
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.login-header {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.brand-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 32px;
+  letter-spacing: 2px;
+  color: #1a1a1a;
+}
+
+.brand-tagline {
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--text-secondary);
+  letter-spacing: 3px;
+}
+
+/* Inputs */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  font-size: 15px;
+  outline: none;
+}
+
+.password-field {
+  position: relative;
+}
+
+.visibility-btn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.form-utils {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.signin-btn {
+  width: 100%;
+  padding: 18px;
+  border-radius: 15px;
+  border: none;
+  background: #1a1a1a;
+  color: white;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Socials */
+.social-divider {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+  font-size: 9px;
+  font-weight: 800;
+  color: var(--text-secondary);
+}
+
+.social-divider::before,
+.social-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.social-divider span {
+  padding: 0 10px;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.social-tile {
+  height: 60px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.social-tile img {
+  width: 24px;
+}
+
+.footer-text {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-top: 20px;
+}

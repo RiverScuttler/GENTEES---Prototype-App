@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Gen Tees - Login</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Hanken+Grotesk:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+  <div class="device-wrapper">
+    <div class="phone-frame">
+      <div class="notch">
+        <div class="camera"></div>
+        <div class="speaker"></div>
+      </div>
+
+      <div class="device-screen">
+        <div class="login-container">
+          <!-- Brand Section -->
+          <div class="login-header">
+            <h1 class="brand-name">GEN TEES</h1>
+            <p class="brand-tagline">STREETWEAR BY YOU</p>
+          </div>
+
+          <!-- Input Section -->
+          <form id="loginForm" class="login-form">
+            <div class="input-group">
+              <label>Email</label>
+              <input type="email" id="email" placeholder="Enter email" required>
+            </div>
+
+            <div class="input-group">
+              <label>Password</label>
+              <div class="password-field">
+                <input type="password" id="password" placeholder="••••••••" required>
+                <!-- <button type="button" id="togglePass" class="visibility-btn">👁️</button> -->
+              </div>
+            </div>
+
+            <div class="form-utils">
+              <label class="check-container">
+                <input type="checkbox"> <span>Remember</span>
+              </label>
+              <a href="#">Forgot?</a>
+            </div>
+
+            <button type="submit" class="signin-btn">SIGN IN</button>
+          </form>
+
+          <!-- Social Section -->
+          <div class="social-divider">
+            <span>OR CONTINUE WITH</span>
+          </div>
+
+          <div class="social-grid">
+            <button class="social-tile"><img src="https://www.gstatic.com/images/branding/product/1x/gsa_512dp.png"
+                alt="Google"></button>
+            <button class="social-tile"><img
+                src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="FB"></button>
+            <button class="social-tile tiktok"><img
+                src="https://tse2.mm.bing.net/th/id/OIP.F7Kjl01AXppzqkPCEab1pwHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="T"></button>
+          </div>
+
+          <p class="footer-text">New here? <a href="#">Create Account</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="login.js"></script>
+</body>
+
+</html>
