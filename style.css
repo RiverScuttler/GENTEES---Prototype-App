@@ -546,9 +546,11 @@ body {
   font-size: 10px;
   font-weight: 700;
   display: flex;
+  /* Matches the JS display property */
   align-items: center;
   justify-content: center;
   border: 2px solid var(--bg-primary);
+  color: white;
 }
 
 /* Search Bar */

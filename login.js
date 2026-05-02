@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Stop the form from actually submitting/refreshing the page
       e.preventDefault();
       const btn = document.querySelector('.signin-btn');
-      btn.textContent = "AUTHENTICATING...";
+      btn.textContent = "Logging in...";
       btn.style.opacity = "0.7";
       btn.style.pointerEvents = "none";
 

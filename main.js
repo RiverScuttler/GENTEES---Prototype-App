@@ -123,13 +123,13 @@ function toggleCartDrawer() {
 
 // Menu items
 document.querySelectorAll('.menu-item').forEach(item => {
-   item.addEventListener('click', function () {
-      // If this is the logout button, don't show the generic alert
-      if (this.id === 'logoutBtn') return; 
+  item.addEventListener('click', function () {
+    // If this is the logout button, don't show the generic alert
+    if (this.id === 'logoutBtn') return;
 
-      const text = this.querySelector('.menu-text').textContent;
-      alert(`Opening ${text}...`);
-   });
+    const text = this.querySelector('.menu-text').textContent;
+    alert(`Opening ${text}...`);
+  });
 });
 
 // Search bar
@@ -168,7 +168,7 @@ document.querySelectorAll('.product-card, .nav-item, .menu-item, .category-pill'
 // --- CART STATE ---
 let cart = [
   { id: 1, name: '"The Recon" Utility Cargo Skirt', price: 950, qty: 1, imgClass: 'cart-image1' },
-  { id: 2, name: '"Rough-Cut" Classic Denim Jacket', price: 1450, qty: 2, imgClass: 'cart-image2' },
+  { id: 2, name: '"Rough-Cut" Classic Denim Jacket', price: 1450, qty: 1, imgClass: 'cart-image2' },
   { id: 3, name: 'Athletics Varsity Jacket', price: 1250, qty: 1, imgClass: 'cart-image3' }
 ];
 
@@ -188,6 +188,12 @@ function renderCart() {
                 <p style="font-size:40px;">🛍️</p>
                 <p>Your cart is empty.<br>Favorite an item to add it!</p>
             </div>`;
+
+    // REMOVE BADGE: Hide the badge element if no items exist
+    if (badge) {
+      badge.style.display = 'none';
+    }
+
     // Reset totals to 0
     document.querySelector('.total-row span:last-child').textContent = `₱0`;
     document.querySelector('.total-row.final span:last-child').textContent = `₱0`;
@@ -199,7 +205,7 @@ function renderCart() {
     subtotal += item.price * item.qty;
     return `
             <div class="cart-item">
-                <div class="${item.imgClass}"></div>
+                <div class="${item.imgClass}" style="width: 80px; height: 100px; border-radius: 12px;"></div>
                 <div class="cart-details">
                     <div class="cart-name">${item.name}</div>
                     <div class="cart-actions">
@@ -213,6 +219,11 @@ function renderCart() {
                 </div>
             </div>`;
   }).join('');
+
+  if (badge) {
+    badge.style.display = 'flex';
+    badge.textContent = cart.length;
+  }
 
   //  Update Totals in Drawer
   const total = subtotal + (cart.length > 0 ? SHIPPING_FEE : 0);
@@ -248,7 +259,7 @@ document.getElementById('logoutBtn')?.addEventListener('click', function (e) {
   vibrate(15);
 
   //  Show Confirmation Dialog
-  const confirmLogout = confirm("Are you sure you want to log out of GEN TEES?");
+  const confirmLogout = confirm("Are you sure you want to log out?");
 
   if (confirmLogout) {
     //  Visual Feedback
